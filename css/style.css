@@ -240,7 +240,7 @@ section { padding: 64px 0; border-top: 1px solid var(--line); }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.75s ease;
 }
 .slider img.active { opacity: 1; }
 .slider-bar-track {
