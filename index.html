@@ -165,7 +165,18 @@
         .form-error.active {
             display: flex;
         }
+        
+        /* New: View All Projects button animation */
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-slide-up {
+            animation: slideInUp 0.8s ease forwards;
+        }
     </style>
+<base target="_blank">
 </head>
 <body class="antialiased">
 
@@ -658,6 +669,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- View All Projects Button -->
+                <div class="text-center mt-16 animate-slide-up">
+                    <a href="projects.html" class="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyber-primary to-cyber-secondary text-cyber-darker font-bold rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,240,255,0.3)]">
+                        <span class="relative z-10 font-cyber text-lg">View All Projects</span>
+                        <i class="fas fa-rocket relative z-10 group-hover:translate-x-1 group-hover:rotate-12 transition-all"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cyber-primary via-cyber-secondary to-cyber-accent opacity-0 group-hover:opacity-30 blur-xl transition-opacity"></div>
+                    </a>
+                    <p class="mt-4 text-gray-500 text-sm">Explore the full showcase with 3D carousel, demos & more</p>
                 </div>
             </div>
         </div>
